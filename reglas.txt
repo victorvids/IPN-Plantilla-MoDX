@@ -1,0 +1,248 @@
+when HTTP_REQUEST
+{
+    if {not ( [string tolower [HTTP::host]] starts_with "www.")}
+            {
+                HTTP::redirect "https://www.[HTTP::host][HTTP::uri]"
+            }
+    elseif { [string tolower [HTTP::host]] equals "www.ipn.mx"}
+	    {
+                HTTP::redirect "https://www.ipn.mx"
+            }
+    elseif { ([HTTP::host] eq "www.ipn.mx" ) & ( [HTTP::uri] eq "/Paginas/inicio.aspx" )  }
+		{
+		    HTTP::redirect "https://www.ipn.mx"     
+ 		}
+    elseif { [HTTP::host] eq "www.comunicacionsocial.ipn.mx"}
+            {
+            	HTTP::redirect "https://www.ipn.mx/CCS/"
+            }
+   elseif { [HTTP::host] eq "www.dirbibliotecas.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/biblioteca/"
+                }
+    elseif { [HTTP::host] eq "www.cenac.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/cenac/"
+                }
+    elseif { [HTTP::host] eq "www.ciebt.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/ciebt/"
+                }
+    elseif { [HTTP::host] eq "www.datosabiertos.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/datosabiertos/"
+                }
+       elseif { [HTTP::host] eq "www.secservicioseducativos.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/sse/"
+                }
+    elseif { [HTTP::host] eq "www.sse.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/sse/"
+                }
+    elseif { [HTTP::host] eq "www.cca.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/cca/"
+                }
+    elseif { [HTTP::host] eq "www.prestaciones.capitalhumano.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/DPS/"
+               }
+    elseif { [HTTP::host] eq "www.coordinacionredes.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/coriyp/"
+                }
+    elseif { [HTTP::host] eq "www.coriyp.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/coriyp/"
+                }
+    elseif { [HTTP::host] eq "www.dse.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/dse/"
+                }
+    elseif { [HTTP::host] eq "www.sip.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/sip/"
+                }
+    elseif { [HTTP::host] eq "www.posgrado.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/posgrado/"
+                }
+    elseif { [HTTP::host] eq "www.defensoria.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/defensoria/"
+                }
+    elseif { [HTTP::host] eq "www.dch.ipn.mx"}
+               {
+                    HTTP::redirect "https://www.ipn.mx/dch/"
+                }
+    elseif { [HTTP::host] eq "www.cgsi.ipn.mx"}
+                {
+                    HTTP::redirect "https://www.ipn.mx/cgsi/"
+                }
+    elseif { [HTTP::host] eq "www.abogadogeneral.ipn.mx"} 
+                {
+                    HTTP::redirect "https://www.ipn.mx/normatividad/"
+                }
+   
+    elseif { ([HTTP::host] eq "www.cgfie.ipn.mx")}
+		{
+		    HTTP::redirect "https://www.ipn.mx/cgfie/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.drf.ipn.mx" )}
+		{
+		    HTTP::redirect "https://www.ipn.mx/drf/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.drmys.ipn.mx" )}
+		{
+		    HTTP::redirect "https://www.ipn.mx/drmys/"     
+		}
+    elseif { ([HTTP::host] eq "www.codigodeconducta.ipn.mx")}
+		{
+		    HTTP::redirect "https://www.ipn.mx/etica/"     
+		}
+    elseif { ([HTTP::host] eq "www.sg.ipn.mx")}
+		{
+		    HTTP::redirect "https://www.ipn.mx/sg/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.cocendi.ipn.mx")}
+		{
+		    HTTP::redirect "https://www.ipn.mx/cocendi/"     
+		}
+    elseif { ([HTTP::host] eq "www.decanato.ipn.mx")}
+		{
+    		    HTTP::redirect "https://www.ipn.mx/decanato/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.des.ipn.mx"}
+		{
+		    HTTP::redirect "https://www.ipn.mx/des/"     
+		}
+    elseif { ([HTTP::host] eq "www.nanocentro.ipn.mx" )}
+		{
+		    HTTP::redirect "https://www.ipn.mx/nanocentro/"     
+		}
+    elseif { ([HTTP::host] eq "www.innovacion.ipn.mx"}
+		{
+		    HTTP::redirect "https://www.ipn.mx/innovacion/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.investigacion.ipn.mx")}
+		{
+		    HTTP::redirect "https://www.ipn.mx/investigacion/"     
+		}
+    elseif { ([HTTP::host] eq "www.cultura.ipn.mx")}
+		{
+		    HTTP::redirect "https://www.ipn.mx/cultura/"     
+		}
+    elseif { ([HTTP::host] eq "www.secadministracion.ipn.mx")}
+		{
+		    HTTP::redirect "https://www.ipn.mx/secadmin/"     
+		}
+    elseif { [HTTP::host] eq " www.especialidadmkt.escatep.ipn.mx "}
+                {
+                    HTTP::redirect " https://www.escatep.ipn.mx/especialidadmkt/"
+                }
+
+    elseif { ([HTTP::host] eq "www.ipn.mx" ) & ( [HTTP::uri] eq "/posgrados/Paginas/Doctorados.aspx" )  }
+		{
+		    HTTP::redirect "https://www.ipn.mx/oferta-educativa/posgrado/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.est.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/Inicio.aspx" )  } 
+		{
+		    HTTP::redirect "https://www.est.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cicsma.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		    HTTP::redirect "https://www.cicsma.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.escatep.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		    HTTP::redirect "https://www.escatep.ipn.mx/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.upibi.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		    HTTP::redirect "https://www.upibi.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cics-sto.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		    HTTP::redirect "https://www.cics-sto.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.esm.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		    HTTP::redirect "https://www.esm.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.esiqie.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		    HTTP::redirect "https://www.esiqie.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.esit.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.esit.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "wwww.escasto.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+  		   HTTP::redirect "https://www.escasto.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.eseo.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.eseo.ipn.mx/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.esimez.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+    		   HTTP::redirect "https://www.esimez.ipn.mx/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.esimetic.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.esimetic.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.upiicsa.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{ 
+		   HTTP::redirect "https://www.upiicsa.ipn.mx/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.esiatec.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+   		   HTTP::redirect "https://www.esiatec.ipn.mx/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.esiaz.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.esiaz.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cecyt1.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.cecyt1.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cecyt2.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.cecyt2.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cecyt4.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.cecyt4.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cecyt5.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.cecyt5.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cecyt6.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.cecyt6.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cecyt15.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.cecyt15.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cecyt8.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.cecyt8.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cecyt10.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		   HTTP::redirect "https://www.cecyt10.ipn.mx/"     
+		}
+    elseif { ([HTTP::host] eq "www.cecyt11.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		    HTTP::redirect "https://www.cecyt11.ipn.mx/"     
+ 		}
+    elseif { ([HTTP::host] eq "www.cet1.ipn.mx" ) & ( [HTTP::uri] starts_with "/Paginas/inicio.aspx" )  } 
+		{
+		    HTTP::redirect "https://www.cet1.ipn.mx/"     
+		}
